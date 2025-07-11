@@ -1,0 +1,11 @@
+- name: Crear carpeta /UTN/Profesor
+  ansible.builtin.file:
+    path: /UTN/Profesor
+    state: directory
+    mode: '0755'
+
+- name: Crear carpeta /UTN/Alumno
+  ansible.builtin.file:
+    path: /UTN/Alumno
+    state: directory
+    mode: '0755'  

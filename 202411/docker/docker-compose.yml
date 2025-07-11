@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    image: lucastissera/web2-tissera
+    ports:
+      - "81:80"
+    volumes:
+      - ./web/file:/usr/share/nginx/html/file
+ 

@@ -1,0 +1,23 @@
+- name: Crear grupo GProfesores
+  ansible.builtin.group:
+    name: GProfesores
+    state: present
+
+- name: Crear grupo GAlumnos
+  ansible.builtin.group:
+    name: GAlumnos
+    state: present
+
+- name: Crear usuario profesor y agregar a grupo GProfesores
+  ansible.builtin.user:
+    name: profesor
+    groups: GProfesores
+    append: yes
+    state: present
+
+- name: Crear usuario alumno y agregar a grupo GAlumnos
+  ansible.builtin.user:
+    name: alumno
+    groups: GAlumnos
+    append: yes
+    state: present

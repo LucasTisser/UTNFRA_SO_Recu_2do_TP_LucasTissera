@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - 2PRecuperatorio
+    - Crea_Carpetas_tissera
+    - Cambia_Propiedad_tissera
+    - Sudoers_tissera
